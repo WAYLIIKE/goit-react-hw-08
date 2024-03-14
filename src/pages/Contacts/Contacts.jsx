@@ -12,6 +12,7 @@ import {
   selectFilteredContacts,
   selectLoading,
 } from '../../redux/selectors';
+import { Helmet } from 'react-helmet-async';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={css.container}>
       <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
       <SearchBox />
@@ -43,6 +44,9 @@ export default function Contacts() {
         />
       )}
       <div className={loading ? css.overlay : css.none}></div>
+      <Helmet>
+        <title>Contacts</title>
+      </Helmet>
     </div>
   );
 }

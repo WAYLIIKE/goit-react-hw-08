@@ -33,7 +33,7 @@ export const LoginForm = () => {
         }}
         validationSchema={loginSchema}
       >
-        <Form>
+        <Form className={css.wrapper}>
           <label htmlFor={inputEmailId} className={css.label}>
             Email
           </label>

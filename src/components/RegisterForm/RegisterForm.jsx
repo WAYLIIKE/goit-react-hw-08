@@ -41,7 +41,7 @@ export const RegisterForm = () => {
         }}
         validationSchema={registerSchema}
       >
-        <Form>
+        <Form className={css.wrapper}>
           <label htmlFor={inputNameId} className={css.label}>
             Name
           </label>

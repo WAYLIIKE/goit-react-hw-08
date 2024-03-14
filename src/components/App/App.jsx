@@ -24,7 +24,7 @@ function App() {
   return isRefreshing ? (
     <p>Refreshing...</p>
   ) : (
-    <div>
+    <div className={css.container}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
